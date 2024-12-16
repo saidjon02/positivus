@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 import bottom from '../../imgs/bottom.png';
 import 'swiper/css';
 import 'swiper/css/autoplay'; // Autoplay uchun kerakli style
-import Fetch from './Fetch';
+import Fetch from '../components/Fetch';
 import { Link } from 'react-router-dom';
 import makeImg from '../../imgs/imgss.png';
 function Home() {

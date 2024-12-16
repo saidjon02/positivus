@@ -364,6 +364,9 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+button {
+  cursor: pointer;
+}
 .accor-text-box {
   display: flex;
   grid-template-columns: auto auto;
@@ -735,10 +738,10 @@ button {
 }
 .foot-text2 {
   color: rgb(255, 255, 255);
-font-family: Space Grotesk;
-font-size: 18px;
-font-weight: 400;
-line-height: 28px;
-letter-spacing: 0%;
-text-align: left;
+  font-family: Space Grotesk;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: left;
 }

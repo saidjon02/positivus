@@ -6,10 +6,11 @@ function Header() {
     <div className='header'>
         <div className="container head-row">
         <div className="head-left">
-            <img src={logo} alt="" />
+          <Link to={"/"}> <img src={logo} alt="" /></Link>
+           
         </div>
         <div className="head-right">
-            <Link className="head-link">About us</Link>
+            <Link className="head-link " to={"aboutUs"}>About us</Link>
             <Link className="head-link">Services</Link>
             <Link className="head-link">Use Cases</Link>
             <Link className="head-link">Pricing</Link>
