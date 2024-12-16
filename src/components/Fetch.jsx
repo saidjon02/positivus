@@ -7,11 +7,11 @@ function Fetch(url) {
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);
-  const [accc, setAccc] = useState();
+  const [acc, setAcc] = useState();
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((json) => setAccc(json));
+      .then((json) => setAcc(json));
   }, []);
   const [team, setTeam] = useState();
   useEffect(() => {
@@ -19,7 +19,7 @@ function Fetch(url) {
       .then((res) => res.json())
       .then((json) => setTeam(json));
   }, []);
-  return { data, accc, team };
+  return { data, acc, team };
 }
 
 export default Fetch;

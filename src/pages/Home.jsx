@@ -14,58 +14,19 @@ import iconn from '../../imgs/iconn.png';
 import 'swiper/css/pagination';
 import bottom from '../../imgs/bottom.png';
 import 'swiper/css';
-import 'swiper/css/autoplay'; // Autoplay uchun kerakli style
+import 'swiper/css/autoplay';
 import Fetch from '../components/Fetch';
 import { Link } from 'react-router-dom';
 import makeImg from '../../imgs/imgss.png';
 function Home() {
   const { data } = Fetch('http://localhost:8000/item');
   const { team } = Fetch('http://localhost:8000/team');
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const accc = [
-    {
-      numb: '01',
-      title: 'Consultation',
-      text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-      id: 1,
-    },
-    {
-      numb: '02',
-      title: 'Research and Strategy Development',
-      text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-      id: 2,
-    },
-    {
-      numb: '03',
-      title: 'Implementation',
-      text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-      id: 3,
-    },
-    {
-      numb: '04',
-      title: 'Monitoring and Optimization',
-      text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-      id: 4,
-    },
-    {
-      numb: '05',
-      title: 'Reporting and Communication',
-      text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-      id: 5,
-    },
-    {
-      numb: '06',
-      title: 'Continual Improvement',
-      text: 'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-      id: 6,
-    },
-  ];
+  const { acc } = Fetch('http://localhost:8000/acc');
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
   return (
     <div className="wrap container">
       <div className="home">
@@ -271,7 +232,7 @@ function Home() {
             through Our Case Studies
           </p>
         </div>
-        {accc.map((item, index) => (
+        {acc && acc.map((item, index) => (
           <div
             className={
               activeIndex === index
