@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import img1 from '../../imgs/Illustration.png';
-import { A11y, Autoplay, Pagination } from 'swiper/modules'; // Autoplay modulini import qiling
+import { A11y, Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import imgs1 from '../../imgs/Company logo.png';
 import imgs2 from '../../imgs/Company logo-1.png';
@@ -9,7 +9,7 @@ import imgs4 from '../../imgs/Company logo-3.png';
 import imgs5 from '../../imgs/Company logo-4.png';
 import imgs6 from '../../imgs/Company logo-5.png';
 import conImg from '../../imgs/asdf.png';
-import icon1 from '../../imgs/icon (1).png';
+import icon1 from '../../imgs/icon1.png';
 import iconn from '../../imgs/iconn.png';
 import 'swiper/css/pagination';
 import bottom from '../../imgs/bottom.png';
@@ -52,14 +52,14 @@ function Home() {
       </div>
       <div className="imgs">
         <Swiper
-          // Install Swiper modules
-          modules={[A11y, Autoplay]} // Autoplay modulini qo'shing
+
+          modules={[A11y, Autoplay]} 
           spaceBetween={50}
           slidesPerView={5}
-          loop={true} // Infinite loop
+          loop={true} 
           autoplay={{
-            delay: 1500, // 2 seconds delay between slides
-            disableOnInteraction: false, // Ensures autoplay keeps going even after user interaction
+            delay: 1500, 
+            disableOnInteraction: false, 
           }}
           speed={1000}
           grabCursor={true}
@@ -102,7 +102,6 @@ function Home() {
               alt="there have a picture"
             />
           </SwiperSlide>
-          {/* Add more slides here */}
         </Swiper>
       </div>
       <div className="services">
