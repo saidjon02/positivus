@@ -9,8 +9,7 @@ import imgs4 from '../../imgs/Company logo-3.png';
 import imgs5 from '../../imgs/Company logo-4.png';
 import imgs6 from '../../imgs/Company logo-5.png';
 import conImg from '../../imgs/asdf.png';
-import icon1 from '../../imgs/icon1.png';
-import iconn from '../../imgs/iconn.png';
+// import icon1 from '../../imgs/icon1.png';
 import 'swiper/css/pagination';
 import bottom from '../../imgs/bottom.png';
 import 'swiper/css';
@@ -181,7 +180,7 @@ function Menu() {
           </div>
         </div>
       </div>
-      <div className="study">
+      {/* <div className="study">
         <div className="serv-box">
           <h2 className="serv-title case">Case Studies</h2>
           <p className="serv-text">
@@ -238,7 +237,7 @@ function Menu() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="work">
         <div className="serv-box">
           <h2 className="serv-title case">Case Studies</h2>
