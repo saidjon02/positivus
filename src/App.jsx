@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
 import Header from './pages/Header';
 import Footer from './components/Footer';
 import 'boxicons';
 import AboutUs from './pages/AboutUs';
+import Menu from './pages/Menu';
+
 function App() {
   return (
     <>
@@ -14,7 +15,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home />}
+            element={<Menu />}
           />
           <Route
             path="aboutUs"

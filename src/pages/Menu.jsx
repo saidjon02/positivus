@@ -18,7 +18,7 @@ import 'swiper/css/autoplay';
 import Fetch from '../components/Fetch';
 import { Link } from 'react-router-dom';
 import makeImg from '../../imgs/imgss.png';
-function Home() {
+function Menu() {
   const { data } = Fetch('http://localhost:8000/item');
   const { team } = Fetch('http://localhost:8000/team');
   const { acc } = Fetch('http://localhost:8000/acc');
@@ -503,4 +503,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Menu;
