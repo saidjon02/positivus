@@ -19,9 +19,9 @@ import Fetch from '../components/Fetch';
 import { Link } from 'react-router-dom';
 import makeImg from '../../imgs/imgss.png';
 function Menu() {
-  const { data } = Fetch('http://localhost:8000/item');
-  const { team } = Fetch('http://localhost:8000/team');
-  const { acc } = Fetch('http://localhost:8000/acc');
+  const { data } = Fetch('https://5b4fe1198f106fc2.mokky.dev/positivus1');
+  const { team } = Fetch('https://5b4fe1198f106fc2.mokky.dev/positivus2');
+  const { acc } = Fetch('https://ac8d73010fc49ec5.mokky.dev/positivus3');
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
