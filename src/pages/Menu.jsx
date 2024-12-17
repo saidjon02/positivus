@@ -9,7 +9,7 @@ import imgs4 from '../../imgs/Company logo-3.png';
 import imgs5 from '../../imgs/Company logo-4.png';
 import imgs6 from '../../imgs/Company logo-5.png';
 import conImg from '../../imgs/asdf.png';
-// import icon1 from '../../imgs/icon1.png';
+import icon1 from '../../imgs/icon1.png';
 import iconn from '../../imgs/iconn.png';
 import 'swiper/css/pagination';
 import bottom from '../../imgs/bottom.png';
@@ -173,7 +173,7 @@ function Menu() {
             through Our Case Studies
           </p>
         </div>
-        {/* <div className="study-row">
+        <div className="study-row">
           <div className="study-cards">
             <p className="study-card-text">
               For a local restaurant, we implemented a targeted PPC campaign
@@ -221,7 +221,7 @@ function Menu() {
               />
             </Link>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="work">
         <div className="serv-box">
