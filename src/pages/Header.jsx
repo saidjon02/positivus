@@ -10,7 +10,7 @@ function Header() {
            
         </div>
         <div className="head-right">
-            <Link className="head-link " to={"aboutUs"}>About us</Link>
+            <Link className="head-link">About us</Link>
             <Link className="head-link">Services</Link>
             <Link className="head-link">Use Cases</Link>
             <Link className="head-link">Pricing</Link>

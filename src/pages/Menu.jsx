@@ -18,6 +18,7 @@ import 'swiper/css/autoplay';
 import Fetch from '../components/Fetch';
 import { Link } from 'react-router-dom';
 import makeImg from '../../imgs/imgss.png';
+import { Helmet } from 'react-helmet';
 function Menu() {
   const { data } = Fetch('https://5b4fe1198f106fc2.mokky.dev/positivus1');
   const { team } = Fetch('https://5b4fe1198f106fc2.mokky.dev/positivus2');
@@ -27,8 +28,24 @@ function Menu() {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   return (
     <div className="wrap container">
+      <Helmet>
+        <meta
+          name="description"
+          content="Positivus inspired site – a platform filled with positive thoughts and motivation. "
+        />
+        <meta
+          name="keywords"
+          content="Positivus, Saidjon sites, Positivus by Saidjon"
+        />
+        <title>Positivus by Fozilov Saidjon</title>
+        <link
+          rel="canonical"
+          href="https://saidjon-positivus.netlify.app/"
+        />
+      </Helmet>
       <div className="home">
         <div className="home-row">
           <div className="home-left">
@@ -52,14 +69,13 @@ function Menu() {
       </div>
       <div className="imgs">
         <Swiper
-
-          modules={[A11y, Autoplay]} 
+          modules={[A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={5}
-          loop={true} 
+          loop={true}
           autoplay={{
-            delay: 1500, 
-            disableOnInteraction: false, 
+            delay: 1500,
+            disableOnInteraction: false,
           }}
           speed={1000}
           grabCursor={true}
@@ -118,10 +134,10 @@ function Menu() {
               return (
                 <div className={`serv-cards ${e.bg}`}>
                   <div className="s-card-left">
-                    <h1 className="serv-card-title">
+                    <h2 className="serv-card-title">
                       <span className={`${e.color}`}>{e.title}</span> <br />
                       <span className={`${e.color}`}>{e.title2}</span>
-                    </h1>
+                    </h2>
                     <div className="s-c-img2">
                       <img
                         src={e.img2}
@@ -149,7 +165,7 @@ function Menu() {
       <div className="make">
         <div className="make-row">
           <div className="make-left">
-            <h2 className="make-title">Let’s make things happen</h2>
+            <h1 className="make-title">Let’s make things happen</h1>
             <p className="make-text">
               Contact us today to learn more about how our digital marketing
               services can help your business grow and succeed online.
@@ -231,30 +247,33 @@ function Menu() {
             through Our Case Studies
           </p>
         </div>
-        {acc && acc.map((item, index) => (
-          <div
-            className={
-              activeIndex === index
-                ? 'accordion-body open accordion'
-                : 'accordion-body accordion'
-            }
-            key={index}
-            onClick={() => toggleAccordion(index)}
-          >
-            <div className="accordion-header">
-              <div className="accor-text-box">
-                <h2 className="numb">{item.numb}</h2>
-                <h3 className="accor-title">{item.title}</h3>
+        {acc &&
+          acc.map((item, index) => (
+            <div
+              className={
+                activeIndex === index
+                  ? 'accordion-body open accordion'
+                  : 'accordion-body accordion'
+              }
+              key={index}
+              onClick={() => toggleAccordion(index)}
+            >
+              <div className="accordion-header">
+                <div className="accor-text-box">
+                  <h2 className="numb">{item.numb}</h2>
+                  <h3 className="accor-title">{item.title}</h3>
+                </div>
+                <i
+                  className={
+                    activeIndex === index ? 'bx bx-minus' : 'bx bx-plus'
+                  }
+                ></i>
               </div>
-              <i
-                className={activeIndex === index ? 'bx bx-minus' : 'bx bx-plus'}
-              ></i>
+              <div>
+                <p className="accor-text">{item.text}</p>
+              </div>
             </div>
-            <div>
-              <p className="accor-text">{item.text}</p>
-            </div>
-          </div>
-        ))}
+          ))}
       </div>
       <div className="team">
         <div className="serv-box">
@@ -284,11 +303,6 @@ function Menu() {
                     </div>
                   </div>
                   <p className="t-c-text">{a.text}</p>
-                  <img
-                    className="iconn"
-                    src={iconn}
-                    alt=""
-                  />
                 </div>
               );
             })}
